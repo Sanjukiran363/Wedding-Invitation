@@ -1,0 +1,377 @@
+/* Basic Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffafa;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    font-family: 'Cursive', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+  
+  /* Countdown Section */
+  .countdown {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff0f5;
+  }
+  
+  .countdown h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #c2185b;
+    font-weight: bold;
+  }
+  
+  #timer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  #timer div {
+    background-color: #ff9a9e;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #timer div span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  #timer div p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 5px;
+  }
+  
+  /* Couple Section */
+  .couple {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    background-color: #fff0f5;
+  }
+  
+  .person {
+    text-align: center;
+    max-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .person:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .person img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .person h2 {
+    font-size: 1.6rem;
+    color: #d6336c;
+    margin: 10px 0;
+  }
+  
+  .person p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* 💖 Family Section */
+  .family {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fdf0f5;
+  }
+  
+  .family h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #a83256;
+  }
+  
+  .family img {
+    max-width: 95%;
+    border-radius: 20px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .family img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Venue Section */
+  .venue {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffe4e1;
+  }
+  
+  .venue h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #c2185b;
+  }
+  
+  .venue p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+  }
+  
+  iframe {
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Video Section */
+  .video {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+  }
+  
+  .video h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #b03060;
+  }
+  
+  video {
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #ffb6c1;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Floating Flowers */
+  .flower {
+    position: absolute;
+    z-index: 10;
+    opacity: 0.7;
+    animation: float 10s ease-in-out infinite;
+  }
+  
+  .flower1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .flower2 {
+    top: 40%;
+    left: 80%;
+    animation-delay: 3s;
+  }
+  
+  .flower3 {
+    top: 60%;
+    left: 40%;
+    animation-delay: 6s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+      transform: translateY(0) rotate(360deg);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .couple {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #timer {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+ /* Responsive Google Map Styling */
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect Ratio for 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Optional: Style adjustments for small screen */
+  @media (max-width: 768px) {
+    .map-container {
+      padding-bottom: 60%; /* Slightly adjusted for smaller screens */
+    }
+  }
+/* Countdown Section Styling */
+/* Countdown Section Styling */
+.countdown {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Reduced gap between timer items */
+}
+
+#timer div {
+  font-size: 1.5rem; /* Smaller font size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 10px; /* Reduced padding for smaller boxes */
+  border: 2px solid #000; /* Optional border for visibility */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f97171; /* Light background for the boxes */
+}
+
+#timer span {
+  font-size: 2.5rem; /* Reduced size for the numbers */
+  font-weight: bold;
+  color: #333; /* Dark color for the numbers for better visibility */
+}
+
+/* Responsive Styling for Mobile Devices */
+@media (max-width: 768px) {
+  #timer {
+    flex-direction: row; /* Keep items in a horizontal row */
+    padding: 0 10px;
+  }
+
+  #timer div {
+    margin: 5px; /* Reduced margin between items */
+    padding: 5px 8px; /* Smaller padding for a tighter layout */
+  }
+
+  #timer span {
+    font-size: 2.2rem; /* Adjust font size for medium screens */
+    color: #333; /* Keep the text color visible */
+  }
+}
+
+@media (max-width: 480px) {
+  #timer {
+    flex-direction: row; /* Keep items in a horizontal row */
+    gap: 5px; /* Even smaller gap between items */
+  }
+
+  #timer div {
+    margin: 5px; /* Keep the margin consistent */
+    padding: 4px 7px; /* Smaller padding on mobile */
+  }
+
+  #timer span {
+    font-size: 2rem; /* Smaller font size for mobile */
+    color: #333; /* Ensure visibility */
+  }
+}
+
+
+  /* Hero Section Styling */
+.hero {
+    text-align: center;
+    background-color: #f1f1f1; /* Optional, you can change the background color */
+    padding: 50px 20px; /* Adjust padding to make it look good */
+  }
+  
+  .hero h1 {
+    font-size: 3rem; /* Default font size for larger screens */
+    color: #333; /* Text color */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.5rem; /* Default font size for paragraph */
+    color: #555; /* Text color */
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Responsive Styling for Mobile Devices */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem; /* Slightly smaller on tablets */
+    }
+  
+    .hero p {
+      font-size: 1.2rem; /* Slightly smaller on tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2rem; /* Smaller for mobile */
+    }
+  
+    .hero p {
+      font-size: 1rem; /* Smaller for mobile */
+    }
+  
+    .hero {
+      padding: 30px 15px; /* Reduced padding on small screens */
+    }
+  }
+  

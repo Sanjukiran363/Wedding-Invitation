@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bava's Wedding</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Flowers
+  <img src="flower.png" class="flower flower1" />
+  <img src="flower.png" class="flower flower2" />
+  <img src="flower.png" class="flower flower3" /> -->
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Dinesh ❤️ Kalanjali</h1>
+    <p>We Are Getting Married!</p>
+  </header>
+
+  <!-- Countdown Section -->
+  <section class="countdown">
+    <h2>Countdown to the Big Day</h2>
+    <div id="timer">
+      <div><span id="days">0</span><p>Days</p></div>
+      <div><span id="hours">0</span><p>Hours</p></div>
+      <div><span id="minutes">0</span><p>Minutes</p></div>
+      <div><span id="seconds">0</span><p>Seconds</p></div>
+    </div>
+  </section>
+
+  <!-- Couple Section -->
+  <section class="couple">
+    <div class="person">
+      <img src="bride.JPG" alt="Bride" />
+      <h2>Kalanjali</h2>
+      <p>Soft and kind-hearted, our charming bride.</p>
+    </div>
+    <div class="person">
+      <img src="groom.JPG" alt="Groom" />
+      <h2>Dinesh</h2>
+      <p>Smart and cheerful, our handsome groom.</p>
+    </div>
+  </section>
+
+  <!-- 💖 Family Section -->
+  <section class="family">
+    <h2>Our Loving Family</h2>
+    <p>Family is the heart of every celebration ❤️</p>
+    <img src="family.JPG" alt="Family Photo" />
+  </section>
+
+  <!-- Venue Section -->
+ <!-- Venue Section -->
+ <section class="venue">
+    <h2>Wedding Venue</h2>
+    <p>Sri Kota Chennakesava Swami Devasthanam, Nossam,</p>
+    <p>Date: April 20, 2025 | Time: 9:45 AM</p>
+    <!-- Responsive Google Map -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481.7549707021494!2d78.39125470104217!3d14.990497645122723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb46e9899a3c761%3A0x74f10344719246d8!2sChennakesava%20swami%20temple!5e0!3m2!1sen!2sin!4v1744624710065!5m2!1sen!2sin" 
+        class="map" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+  
+  
+
+  <!-- Video Invitation Section -->
+  <section class="video">
+    <h2>Watch Our Invitation</h2>
+    <video autoplay muted controls>
+      <source src="wedding-invite.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+  </video>
+  
+  
+  
+      
+      
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>developed by sanjukiran</p>
+  </footer>
+
+  <!-- Countdown Script -->
+  <script>
+    const weddingDate = new Date("2025-04-20T09:45:00").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }, 1000);
+  </script>
+
+</body>
+</html>
